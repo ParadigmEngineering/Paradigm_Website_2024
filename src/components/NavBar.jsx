@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import { motion } from 'framer-motion';
 import logo from '../content/logo.png'
 
 export const Navbar = () => {
