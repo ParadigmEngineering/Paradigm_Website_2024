@@ -1,18 +1,15 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import logo from '../content/logo.png';
-import { Navbar } from '../components/NavBar.jsx';
-import { Document } from 'react-pdf';
 import Footer from '../components/Footer.astro';
 ---
 
 <Layout title="Paradigm Engineering">
 	<main>
-		<Navbar client:load />
 		<div id="home" class="relative w-full h-[60rem]">
 			<div class="w-full h-full bg-[url('/temp-bg.jpeg')] bg-cover bg-center" />
 			<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col justify-center items-center">
-				<div class="flex items-center lg:flex-row flex-col lg:text-start text-center">
+				<div class="flex items-center lg:flex-row flex-col lg:text-start text-center bg-black bg-opacity-50">
 					<img class="h-60 w-60 animate-spin-slow invert" src={logo.src}>
 					<div class="text-white font-roboto text-8xl">Paradigm Engineering</div>
 				</div>
