@@ -1,0 +1,67 @@
+---
+import Layout from '../layouts/Layout.astro';
+import sponsors from '../content/sponsors.json';
+import SponsorCard from '../components/SponsorCard.astro';
+import logo from '../content/logo.png';
+---
+<Layout title="Paradigm Engineering - Sponsorship">
+	<div class="relative w-full h-[40rem]">
+		<div class="w-full h-full bg-[url('/temp-bg.jpeg')] bg-cover bg-center" />
+		<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col justify-center items-center">
+			<div class="flex items-center lg:flex-row flex-col lg:text-start text-center bg-black bg-opacity-50">
+				<img class="h-32 w-32 animate-spin-slow invert" src={logo.src}>
+				<div class="text-white font-roboto text-5xl pr-3">Sponsorship</div>
+			</div>
+		</div>
+	</div>
+    <div class="flex items-center w-full bg-gray-200 md:px-48 px-10">
+		<div>
+			<div class="space-y-5">
+                <div class="pt-10 font-roboto text-3xl">Why Sponsor Paradigm?</div>
+                <div class="text-gray-600">
+                    Paradigm gives students the opportunities to come together and work towards a common goal. It allows future members of the engineering and business workforce to develop the skills to effectively work together, make long-lasting connections, and think creatively and independently. Because of the generosity of sponsors, Paradigm members get to become stronger innovators, leaders, and highly qualified professionals of the future.
+                </div>
+                <div class="text-gray-600">
+                    Paradigm sponsors are also fostering innovation in Canada and have direct access to a large body of motivated students for future hire. Our group is striving for another podium finish this year, and with the new generation of team members gaining momentum this early in the season, we believe we can accomplish just that.
+                </div>
+                <div class="pt-10 font-roboto text-3xl">Sponsorship Levels</div>
+                <div class="text-gray-600">
+                    In return for sponsoring our team, Paradigm will represent the sponsoring company by doing the following:
+                </div>
+                <ul class="list-disc pl-5 text-gray-600">
+                    <li class="mt-2 mb-2">
+                        <strong>Media Exposure:</strong> Paradigm’s legacy has attracted a large audience over time. With a sponsorship, Paradigm will be sure to represent and promote your company on all our media platforms across the engineering and public landscape.
+                    </li>
+                    <li class="mt-2 mb-2">
+                        <strong>Apparel:</strong> Sponsoring companies will have their logo on the back of the shirts of 35+ students who wear their Paradigm merchandise not only to competition, but in everyday wear.
+                    </li>
+                    <li class="mt-2 mb-2">
+                        <strong>The Car:</strong> A racing car isn’t complete without the look of sponsor logos all over the car for the competitors, spectators and organizers from around the world to see!
+                    </li>
+                </ul>
+            </div>
+		</div>
+	</div>
+    <div class="w-full bg-gray-200">
+        <div class="md:px-64 md:py-20">
+            <div class="text-center">
+                <h2 class="font-bold text-4xl mb-10">Current Sponsors</h2> 
+            </div>
+            {['Gold', 'Silver', 'Bronze'].map(tier => {
+                const tierSponsors = sponsors.filter(sponsor => sponsor.tier === tier);
+                if (tierSponsors.length > 0) {
+                    return (
+                        <div>
+                            <h3 class="text-center font-bold text-3xl mb-5">{tier}</h3>
+                            <ul class="flex flex-wrap justify-center">
+                                {tierSponsors.map(sponsor => (
+                                    <SponsorCard logo={`/src/content/${sponsor.logo}`} />
+                                ))}
+                            </ul>
+                        </div>
+                    );
+                }
+            })}
+        </div>
+    </div>    
+</Layout>
