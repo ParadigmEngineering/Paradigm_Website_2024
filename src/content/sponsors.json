@@ -1,8 +1,8 @@
 [
     {
-      "name": "Energy Research & Innovation NL",
-      "logo": "ERINL.png",
-      "tier": "Silver"
+        "name": "Energy Research & Innovation NL",
+        "logo": "ERINL.png",
+        "tier": "Silver"
     },
     {
         "name": "Verafin",
@@ -15,18 +15,48 @@
         "tier": "Silver"
     },
     {
+        "name": "Bluedrop",
+        "logo": "Bluedrop.png",
+        "tier": "Bronze"
+    },
+    {
         "name": "Core Engineering",
         "logo": "CoreEng.png",
         "tier": "Bronze"
-      },
-      {
-          "name": "Genoa Design International",
-          "logo": "Genoa.png",
-          "tier": "Bronze"
-      },
-      {
-          "name": "Swagelok",
-          "logo": "Swagelok.png",
-          "tier": "Bronze"
-      }
+    },
+    {
+        "name": "Fortis",
+        "logo": "Fortis.png",
+        "tier": "Bronze"
+    },
+    {
+        "name": "Genoa Design International",
+        "logo": "Genoa.png",
+        "tier": "Bronze"
+    },
+    {
+        "name": "HeyOrca",
+        "logo": "HeyOrca.png",
+        "tier": "Bronze"
+    },
+    {
+        "name": "PegNL",
+        "logo": "pegnl.png",
+        "tier": "Bronze"
+    },
+    {
+        "name": "SetpointAE",
+        "logo": "Setpoint.png",
+        "tier": "Bronze"
+    },
+    {
+        "name": "Swagelok",
+        "logo": "Swagelok.png",
+        "tier": "Bronze"
+    },
+    {
+        "name": "Tri-Logging",
+        "logo": "TriLogging.png",
+        "tier": "Bronze"
+    }
   ]
