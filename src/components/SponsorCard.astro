@@ -1,0 +1,28 @@
+---
+interface Props {
+  logo: string;
+}
+
+const { logo } = Astro.props;
+---
+
+<li class="sponsor-card">
+  <img src={logo} alt="" class="sponsor-logo" />
+</li>
+
+<style>
+  .sponsor-card {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+    margin: 1rem;
+    max-width: 200px;
+  }
+
+  .sponsor-logo {
+    height: 100px; 
+    width: auto;  
+    object-fit: contain;
+}
+</style>
