@@ -38,7 +38,7 @@ export const Navbar = () => {
 							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v0m0 7v0m0 7v0m0-13a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z" />
 						</svg>
 					</li>
-					<li><a className="text-sm text-gray-400 hover:text-gray-500" href="/sponsors">Sponsorship</a></li>
+					<li><a className="text-sm text-gray-400 hover:text-gray-500" href="/#sponsors">Sponsorship</a></li>
 					<li className="text-gray-300">
 						<svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" className="w-4 h-4 current-fill" viewBox="0 0 24 24">
 							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v0m0 7v0m0 7v0m0-13a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z" />
@@ -53,7 +53,7 @@ export const Navbar = () => {
 					<a href="/about" className={`lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-black font-Quicksand items-center justify-center hover:bg-gray-900 hover:text-white `}>
 						About Us
 					</a>
-					<a href="/sponsors" className={`lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-black font-Quicksand items-center justify-center hover:bg-gray-900 hover:text-white `}>
+					<a href="/#sponsors" className={`lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-black font-Quicksand items-center justify-center hover:bg-gray-900 hover:text-white `}>
 						Sponsorship
 					</a>
 					<a href="mailto:team@paradigmhyperloop.com" className={`lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-black font-Quicksand items-center justify-center hover:bg-gray-900 hover:text-white `}>
