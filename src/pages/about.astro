@@ -2,69 +2,120 @@
 import Layout from '../layouts/Layout.astro';
 import logo from '../content/logo.png';
 import team from '../content/team_photo.jpeg';
+import TeamProfile from '../components/TeamProfile.astro';
+
+import ben from '../content/headshots/ben.jpg';
+import sam from '../content/headshots/sam.jpg';
+import mike from '../content/headshots/mike.jpg';
+import ayman from '../content/headshots/ayman.jpg';
+
+import hyperloop from '../content/timeline/hyperloop.jpeg';
+import frog from '../content/timeline/frog.jpg';
+import f1tenth from '../content/timeline/f1tenth.jpg';
 ---
 <Layout title="Paradigm Engineering">
 	<div class="relative w-full h-[40rem]">
 		<div class="w-full h-full bg-[url('/temp-bg.jpeg')] bg-cover bg-center" />
 		<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col justify-center items-center">
-			<div class="flex items-center lg:flex-row flex-col lg:text-start text-center bg-black bg-opacity-50">
+			<div class="flex items-center 2xl:flex-row flex-col 2xl:text-start text-center bg-black bg-opacity-50">
 				<img class="h-32 w-32 animate-spin-slow invert" src={logo.src}>
 				<div class="text-white font-roboto text-5xl pr-3">About Us</div>
 			</div>
 		</div>
 	</div>
-	<div class="w-full bg-white">
-		<img class="md:px-64 md:py-20" src={team.src}>
+	<div class="flex justify-center bg-white">
+		<div class="flex flex-col items-center xl:py-10">
+			<div class="xl:px-[15%] text-gray-700">
+				<img src={team.src}>
+			</div>
+		</div>
 	</div>
-	<div class="flex items-center w-full bg-gray-200 md:px-48 px-10">
-		<div>
-			<div class="space-y-5">
-				<div class="pt-10 font-roboto text-3xl">Who are we?</div>
-				<div class="text-gray-600">Paradigm Engineering is a diverse student group from the Memorial University of Newfoundland and Labrador (MUN).  The team includes three engineering sub-teams for electrical, software, and mechanical work. A team of students from various backgrounds has also been made to complete administrative tasks, digital design work, and media outreach.</div>
+	<div id="who" class="flex justify-center bg-gray-200">
+		<div class="flex flex-col items-center py-10">
+			<div class="text-2xl font-roboto">Who are we?</div>
+			<hr class="w-16 h-0.5 my-2 border-0 bg-gray-900">
+			<div class="pt-4 xl:px-[25%] px-10 text-gray-700">
+				Paradigm Engineering is a diverse student group from the Memorial University of Newfoundland and Labrador (MUN). The team includes three engineering sub-teams for electrical, software, and mechanical work. A team of students from various backgrounds has also been made to complete administrative tasks, digital design work, and media outreach.
 			</div>
-			<div class="space-y-5">
-				<div class="pt-10 font-roboto text-3xl">What do we do?</div>
-				<div class="text-gray-600">We imagine, develop, create, and demonstrate autonomous racing vehicles to compete in various competitions. Our goal is to not only compete and win at these competitions but to push Newfoundland and MUN to the forefront of autonomous vehicle research.</div>
+		</div>
+	</div>
+	<div id="people" class="flex justify-center bg-white">
+		<div class="flex flex-col items-center py-10">
+			<div class="text-2xl font-roboto">Team Leads</div>
+			<hr class="w-16 h-0.5 my-2 border-0 bg-gray-900">
+			<div class="lg:flex lg:flex-row grid grid-cols-2 2xl:space-x-10 pt-4 2xl:px-[20%] px-10">
+				<TeamProfile image={ben} name="Ben Thomas" linkedin="https://www.linkedin.com/in/brjthomas/" isLarge={true} title="Team Lead"/>
+				<TeamProfile image={sam} name="Sam Sheppard" linkedin="https://www.linkedin.com/in/samuel-sheppard-a22393226/" isLarge={true} title="Software Team Lead"/>
+				<TeamProfile image={mike} name="Micheal Mallay" linkedin="https://www.linkedin.com/in/michael-mallay-92a769221/" isLarge={true} title="Electrical Team Lead"/>
+				<TeamProfile image={ayman} name="Ayman Islam" linkedin="https://www.linkedin.com/in/ayman-islam/" isLarge={true} title="Operations Lead"/>
 			</div>
-			<div class="space-y-5">
-				<div class="pt-10 font-roboto text-3xl">Upcoming plans</div>
-				<div class="text-gray-600">The team will be heading to Indiana in May of 2024 to compete in the Purdue University evGrand Prix, hosted by the Autonomous Karting Series (AKS). The competition challenges teams to create a fully autonomous racing go-kart, capable of maneuvering an unseen course and racing around other vehicles, all without the aid of human control. The competition was started in 2009 at Purdue University, with the race being held annually at the University’s Grand Prix Track. The competition touches on the topics of machine learning, drive algorithms, electrical power distribution, PCB design, and mechanical design. A project like this provides an unparalleled experience to the team, shaping the future of the autonomous and robotics industries in this province. </div>
+		</div>
+	</div>
+	<div id="what" class="flex justify-center bg-gray-200">
+		<div class="flex flex-col items-center py-10">
+			<div class="text-2xl font-roboto">What do we do?</div>
+			<hr class="w-16 h-0.5 my-2 border-0 bg-gray-900">
+			<div class="pt-4 xl:px-[25%] px-10 text-gray-700">
+				We imagine, develop, create, and demonstrate autonomous racing vehicles to compete in various competitions. Our goal is to push Newfoundland and MUN to the forefront of autonomous vehicle research.
 			</div>
-			<div class="pt-10 font-roboto text-3xl">A Brief History</div>
-			<div class="md:mx-20 mt-6">
+		</div>
+	</div>
+	<div id="upcoming" class="flex justify-center bg-white">
+		<div class="flex flex-col items-center py-10">
+			<div class="text-2xl font-roboto">Upcoming Plans</div>
+			<hr class="w-16 h-0.5 my-2 border-0 bg-gray-900">
+			<div class="pt-4 xl:px-[25%] px-10 text-gray-700">
+				The team will be heading to Indiana in May of 2024 to compete in the Purdue University evGrand Prix, hosted by the Autonomous Karting Series (AKS). The competition challenges teams to create a fully autonomous racing go-kart, capable of maneuvering an unseen course and racing around other vehicles, all without the aid of human control. The competition was started in 2009 at Purdue University, with the race being held annually at the University’s Grand Prix Track. The competition touches on the topics of machine learning, drive algorithms, electrical power distribution, PCB design, and mechanical design. A project like this provides an unparalleled experience to the team, shaping the future of the autonomous and robotics industries in this province.
+			</div>
+		</div>
+	</div>
+	<div id="history" class="flex justify-center bg-gray-200">
+		<div class="flex flex-col items-center py-10">
+			<div class="text-2xl font-roboto">Our History</div>
+			<hr class="w-16 h-0.5 my-2 border-0 bg-gray-900">
+			<div class="2xl:mx-20 mt-6 px-10">
 				<div class="relative pl-8 sm:pl-32 py-6 group">
 					<div class="flex flex-col sm:flex-row items-start mb-1 group-last:before:hidden before:absolute before:left-2 sm:before:left-0 before:h-full before:px-px before:bg-slate-300 sm:before:ml-[6.5rem] before:self-start before:-translate-x-1/2 before:translate-y-3 after:absolute after:left-2 sm:after:left-0 after:w-2 after:h-2 after:bg-indigo-600 after:border-4 after:box-content after:rounded-full sm:after:ml-[6.5rem] after:-translate-x-1/2 after:translate-y-1.5">
 						<time class="sm:absolute left-0 translate-y-0.5 inline-flex items-center justify-center text-xs font-semibold uppercase w-20 h-6 mb-3 sm:mb-0 text-emerald-600 bg-emerald-100 rounded-full">2016-2019</time>
-						<div class="text-xl font-bold text-slate-900">Founded as Paradigm Hyperloop</div>
+						<div class="text-xl font-bold text-slate-900">
+							Hyperloop Competition
+							<img class="max-h-64 rounded-lg" src={hyperloop.src}/>
+						</div>
 					</div>
-					<div class="text-slate-500">Competed in the SpaceX Hyperloop Competition. Placed 2nd in the 2017 Competition</div>
+					<div class="text-slate-800 text-xl">Paradigm is created, competing in the Hyperloop Competition. Placed second in the world in 2017.</div>
 				</div>
 				
 				<!-- Item #2 -->
 				<div class="relative pl-8 sm:pl-32 py-6 group">
 					<div class="flex flex-col sm:flex-row items-start mb-1 group-last:before:hidden before:absolute before:left-2 sm:before:left-0 before:h-full before:px-px before:bg-slate-300 sm:before:ml-[6.5rem] before:self-start before:-translate-x-1/2 before:translate-y-3 after:absolute after:left-2 sm:after:left-0 after:w-2 after:h-2 after:bg-indigo-600 after:border-4 after:box-content after:rounded-full sm:after:ml-[6.5rem] after:-translate-x-1/2 after:translate-y-1.5">
 						<time class="sm:absolute left-0 translate-y-0.5 inline-flex items-center justify-center text-xs font-semibold uppercase w-20 h-6 mb-3 sm:mb-0 text-emerald-600 bg-emerald-100 rounded-full">2021-2023</time>
-						<div class="text-xl font-bold text-slate-900">Intelligent Ground Vehicle Competition</div>
+						<div class="text-xl font-bold text-slate-900">
+							Intelligent Ground Vehicle Competition
+							<img class="h-64 rounded-lg" src={frog.src}/>
+						</div>
 					</div>
-					<div class="text-slate-500">Did not qualify for their competition. Placed 11th out of 17 in 2023.</div>
+					<div class="text-slate-800 text-xl">Post COVID the team competed in the IGVC, placing 2nd in design and 11th overall in 2023</div>
 				</div>
 				
 				<!-- Item #3 -->
 				<div class="relative pl-8 sm:pl-32 py-6 group">
 					<div class="flex flex-col sm:flex-row items-start mb-1 group-last:before:hidden before:absolute before:left-2 sm:before:left-0 before:h-full before:px-px before:bg-slate-300 sm:before:ml-[6.5rem] before:self-start before:-translate-x-1/2 before:translate-y-3 after:absolute after:left-2 sm:after:left-0 after:w-2 after:h-2 after:bg-indigo-600 after:border-4 after:box-content after:rounded-full sm:after:ml-[6.5rem] after:-translate-x-1/2 after:translate-y-1.5">
 						<time class="sm:absolute left-0 translate-y-0.5 inline-flex items-center justify-center text-xs font-semibold uppercase w-20 h-6 mb-3 sm:mb-0 text-emerald-600 bg-emerald-100 rounded-full">2022-2023</time>
-						<div class="text-xl font-bold text-slate-900">FMUNTENTH is founded</div>
+						<div class="text-xl font-bold text-slate-900">
+							F1Tenth
+							<img class="max-h-64 rounded-lg" src={f1tenth.src}/>
+						</div>
 					</div>
-					<div class="text-slate-500">Built and constructed a self-driving, 1/10th scale racing vehicle. Competed in the F1Tenth Competition in San Antonio, Texas at the CPS-IoT Conference. Placed 9th out of 13. Won Most Spirited and Best Dressed!</div>
+					<div class="text-slate-800 text-xl">The FMUNTENTH team created an autonomous 1/10th scale racing vehicle. Placed 9th at the competition in Texas, winning mist spirited and best dressed as well</div>
 				</div>
 				
 				<!-- Item #4 -->
 				<div class="relative pl-8 sm:pl-32 py-6 group">
 					<div class="flex flex-col sm:flex-row items-start mb-1 group-last:before:hidden before:absolute before:left-2 sm:before:left-0 before:h-full before:px-px before:bg-slate-300 sm:before:ml-[6.5rem] before:self-start before:-translate-x-1/2 before:translate-y-3 after:absolute after:left-2 sm:after:left-0 after:w-2 after:h-2 after:bg-indigo-600 after:border-4 after:box-content after:rounded-full sm:after:ml-[6.5rem] after:-translate-x-1/2 after:translate-y-1.5">
 						<time class="sm:absolute left-0 translate-y-0.5 inline-flex items-center justify-center text-xs font-semibold uppercase w-20 h-6 mb-3 sm:mb-0 text-emerald-600 bg-emerald-100 rounded-full">2023-NOW</time>
-						<div class="text-xl font-bold text-slate-900">New Beginnings</div>
+						<div class="text-xl font-bold text-slate-900">Autonomous Karting Series</div>
 					</div>
-					<div class="text-slate-500">In September of 2023 FMUNTENTH, branded as MUN E-Motorsports, merged with Paradigm to combine resources to start striving towards larger projects. Now Paradigm is upscaling to an autonomous go-kart to compete in the Autonomous Kart Series (AKS) hosted by Purdue University in May of 2024!</div>
+					<div class="text-slate-800 text-xl">Paradigm and FMUNTENTH have merged, becoming one team to create a larger scale autonomous racing vehicle. The team is set to compete in the Autonomous Karting Series competition at Purdue University in May 2024</div>
 				</div>
 			</div>
 		</div>

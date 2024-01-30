@@ -2,6 +2,26 @@
 import Layout from '../layouts/Layout.astro';
 import logo from '../content/logo.png';
 import Footer from '../components/Footer.astro';
+import SubsystemCard from '../components/SubsystemCard.astro';
+import { Computer, Zap, Wrench, Briefcase } from 'lucide-react';
+
+import vinfast from '../content/sponsors/vinfast.png';
+import pennecon from '../content/sponsors/pennecon.png';
+import nlhydro from '../content/sponsors/nlhydro.png';
+import verafin from '../content/sponsors/verafin.png';
+import gh2 from '../content/sponsors/gh2.png';
+import erinl from '../content/sponsors/erinl.png';
+import pegnl from '../content/sponsors/pegnl.png';
+import swagelok from '../content/sponsors/swagelok.png';
+import trilogging from '../content/sponsors/tri-logging.png';
+import beattie from '../content/sponsors/beattie-logo.png';
+import subsea from '../content/sponsors/subsea.png';
+import bluedrop from '../content/sponsors/bluedrop.png';
+import setpoint from '../content/sponsors/setpoint.png';
+import fortis from '../content/sponsors/fortis.png';
+import heyorca from '../content/sponsors/heyorca.png';
+import core from '../content/sponsors/core-eng.png';
+import genoa from '../content/sponsors/genoa.png';
 ---
 
 <Layout title="Paradigm Engineering">
@@ -9,58 +29,167 @@ import Footer from '../components/Footer.astro';
 		<div id="home" class="relative w-full h-[60rem]">
 			<div class="w-full h-full bg-[url('/temp-bg.jpeg')] bg-cover bg-center" />
 			<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col justify-center items-center">
-				<div class="flex items-center lg:flex-row flex-col lg:text-start text-center bg-black bg-opacity-50">
+				<div class="flex items-center 2xl:flex-row flex-col 2xl:text-start text-center bg-black bg-opacity-50">
 					<img class="h-60 w-60 animate-spin-slow invert" src={logo.src}>
-					<div class="text-white font-roboto text-8xl">Paradigm Engineering</div>
+					<div class="text-white font-roboto 2xl:text-8xl text-6xl">Paradigm Engineering</div>
 				</div>
 			</div>
 		</div>
-		<div id="about" class="flex flex-row">
-			<div class="mx-20 mt-6">
-				<div class="relative pl-8 sm:pl-32 py-6 group">
-					<div class="flex flex-col sm:flex-row items-start mb-1 group-last:before:hidden before:absolute before:left-2 sm:before:left-0 before:h-full before:px-px before:bg-slate-300 sm:before:ml-[6.5rem] before:self-start before:-translate-x-1/2 before:translate-y-3 after:absolute after:left-2 sm:after:left-0 after:w-2 after:h-2 after:bg-indigo-600 after:border-4 after:box-content after:border-slate-50 after:rounded-full sm:after:ml-[6.5rem] after:-translate-x-1/2 after:translate-y-1.5">
-						<time class="sm:absolute left-0 translate-y-0.5 inline-flex items-center justify-center text-xs font-semibold uppercase w-20 h-6 mb-3 sm:mb-0 text-emerald-600 bg-emerald-100 rounded-full">2016-2019</time>
-						<div class="text-xl font-bold text-slate-900">Founded as Paradigm Hyperloop</div>
-					</div>
-					<div class="text-slate-500">Competed in the SpaceX Hyperloop Competition. Placed 2nd in the 2017 Competition</div>
-				</div>
-				
-				<!-- Item #2 -->
-				<div class="relative pl-8 sm:pl-32 py-6 group">
-					<div class="flex flex-col sm:flex-row items-start mb-1 group-last:before:hidden before:absolute before:left-2 sm:before:left-0 before:h-full before:px-px before:bg-slate-300 sm:before:ml-[6.5rem] before:self-start before:-translate-x-1/2 before:translate-y-3 after:absolute after:left-2 sm:after:left-0 after:w-2 after:h-2 after:bg-indigo-600 after:border-4 after:box-content after:border-slate-50 after:rounded-full sm:after:ml-[6.5rem] after:-translate-x-1/2 after:translate-y-1.5">
-						<time class="sm:absolute left-0 translate-y-0.5 inline-flex items-center justify-center text-xs font-semibold uppercase w-20 h-6 mb-3 sm:mb-0 text-emerald-600 bg-emerald-100 rounded-full">2021-2023</time>
-						<div class="text-xl font-bold text-slate-900">Intelligent Ground Vehicle Competition</div>
-					</div>
-					<div class="text-slate-500">Did not qualify for their competition. Placed 11th out of 17 in 2023.</div>
-				</div>
-				
-				<!-- Item #3 -->
-				<div class="relative pl-8 sm:pl-32 py-6 group">
-					<div class="flex flex-col sm:flex-row items-start mb-1 group-last:before:hidden before:absolute before:left-2 sm:before:left-0 before:h-full before:px-px before:bg-slate-300 sm:before:ml-[6.5rem] before:self-start before:-translate-x-1/2 before:translate-y-3 after:absolute after:left-2 sm:after:left-0 after:w-2 after:h-2 after:bg-indigo-600 after:border-4 after:box-content after:border-slate-50 after:rounded-full sm:after:ml-[6.5rem] after:-translate-x-1/2 after:translate-y-1.5">
-						<time class="sm:absolute left-0 translate-y-0.5 inline-flex items-center justify-center text-xs font-semibold uppercase w-20 h-6 mb-3 sm:mb-0 text-emerald-600 bg-emerald-100 rounded-full">2022-2023</time>
-						<div class="text-xl font-bold text-slate-900">FMUNTENTH is founded</div>
-					</div>
-					<div class="text-slate-500">Built and constructed a self-driving, 1/10th scale racing vehicle. Competed in the F1Tenth Competition in San Antonio, Texas at the CPS-IoT Conference. Placed 9th out of 13. Won Most Spirited and Best Dressed!</div>
-				</div>
-				
-				<!-- Item #4 -->
-				<div class="relative pl-8 sm:pl-32 py-6 group">
-					<div class="flex flex-col sm:flex-row items-start mb-1 group-last:before:hidden before:absolute before:left-2 sm:before:left-0 before:h-full before:px-px before:bg-slate-300 sm:before:ml-[6.5rem] before:self-start before:-translate-x-1/2 before:translate-y-3 after:absolute after:left-2 sm:after:left-0 after:w-2 after:h-2 after:bg-indigo-600 after:border-4 after:box-content after:border-slate-50 after:rounded-full sm:after:ml-[6.5rem] after:-translate-x-1/2 after:translate-y-1.5">
-						<time class="sm:absolute left-0 translate-y-0.5 inline-flex items-center justify-center text-xs font-semibold uppercase w-20 h-6 mb-3 sm:mb-0 text-emerald-600 bg-emerald-100 rounded-full">2023-NOW</time>
-						<div class="text-xl font-bold text-slate-900">New Beginnings</div>
-					</div>
-					<div class="text-slate-500">In September of 2023 FMUNTENTH, branded as MUN E-Motorsports, merged with Paradigm to combine resources to start striving towards larger projects. Now Paradigm is upscaling to an autonomous go-kart to compete in the Autonomous Kart Series (AKS) hosted by Purdue University in May of 2024!</div>
+		<div id="about" class="flex justify-center bg-gray-200">
+			<div class="flex flex-col items-center py-10">
+				<div class="text-2xl font-roboto">Summary</div>
+				<hr class="w-16 h-0.5 my-2 border-0 bg-gray-900">
+				<div class="pt-4 xl:px-[25%] px-10 text-gray-700">
+					Paradigm Engineering is a diverse student group from Memorial University of Newfoundland and Labrador (MUN), focusing on developing and demonstrating autonomous racing vehicles. Comprising electrical, software, and mechanical sub-teams, as well as members for administrative tasks and media outreach, the group aims to excel in competitions and elevate Newfoundland and MUN in autonomous vehicle research. Their upcoming project involves participating in the Purdue University evGrand Prix in May 2024, a competition challenging teams to create fully autonomous racing go-karts. The project encompasses various engineering aspects, providing valuable experience and contributing to the future of autonomous and robotics industries in the province.
 				</div>
 			</div>
 		</div>
-		<div id="sponsors" class="flex flex-col mx-10">
-			<div class="text-3xl font-roboto">Sponsors</div>
-			<div class="text-gray-500">Sponsors are a cruicial part of our team! They allow us to research, design and fabricate our projects are let us travel to our competitions! If your would like to help us out read our sponsorship package below!</div>
-			<div class="flex flex-col items-center">
-				<iframe class="h-screen lg:w-[50%] w-full py-5" src="/Sponsorship Package-3.pdf" allow="autoplay"></iframe>
+		<div id="subsystems" class="flex justify-center bg-white">
+			<div class="flex flex-col items-center py-10">
+				<div class="text-2xl font-roboto">Subteams</div>
+				<hr class="w-16 h-0.5 my-2 border-0 bg-gray-900">
+				<div class="grid lg:grid-cols-4 grid-cols-1 gap-20 px-20 xl:px-[15%]">
+					<SubsystemCard team="Software" desc="The Software team develops a track and obstacle detection algorithm, guiding the cart through seamless wireless communication with onboard components, ensuring a smooth journey."><Computer size={75}  /></SubsystemCard>
+					<SubsystemCard team="Electrical" desc="This subsystem brings the energy to the team - we are responsible for delivering power to all components on the kart, along with creating the electrical connections to allow the algorithm to communicate with external sensor devices."><Zap size={75}  /></SubsystemCard>
+					<SubsystemCard team="Mechanical" desc="The Mechanical Team puts the rubber on the road - our scope includes specifying, designing, modifying & manufacturing all the components necessary to turn a human-controlled go-kart into an autonomous vehicle."><Wrench size={75} /></SubsystemCard>
+					<SubsystemCard team="Business" desc="The business team is responsible for the financial management and marketing side of the project, ensuring our team is on track with our budget and has a strong marketing presence."><Briefcase size={75}  /></SubsystemCard>
+				</div>
+			</div>
+		</div>
+		<div id="sponsors" class="flex justify-center bg-gray-200">
+			<div class="flex flex-col items-center py-10">
+				<div class="text-2xl font-roboto">Sponsors</div>
+				<hr class="w-16 h-0.5 my-2 border-0 bg-gray-900">
+				<div class="pt-4 2xl:px-[30%] px-10 text-gray-700">
+					Sponsors are a cruicial part of our team! They allow us to research, design and fabricate our projects are let us travel to our competitions! If your would like to help us out read our sponsorship package below!
+				</div>
+				<div class="flex flex-col items-center pt-5">
+					<div class="px-5 py-2 rounded-lg 2xl:text-6xl text-4xl bg-yellow-500 font-roboto">Gold</div>
+					<div class="flex flex-row items-center space-x-10 pt-5 px-4">
+						<a href="https://vinfastauto.ca/">
+							<img class="max-h-24" src={vinfast.src}>	
+						</a>
+						<a href="https://pennecon.com/">
+							<img class="max-h-24" src={pennecon.src}>	
+						</a>
+					</div>
+				</div>
+				<div class="flex flex-col items-center pt-5">
+					<div class="px-4 py-2 rounded-lg 2xl:text-5xl text-3xl bg-gray-400 font-roboto">Silver</div>
+					<div class="flex row-auto space-x-5 pt-5 px-4 2xl:block hidden">
+						<a href="https://nlhydro.com/">
+							<img class="max-h-16" src={nlhydro.src}>
+						</a>
+						<a href="https://verafin.com/">
+							<img class="max-h-16" src={verafin.src}>
+						</a>
+						<a href="https://worldenergygh2.com/">
+							<img class="max-h-14" src={gh2.src}>
+						</a>
+						<a href="https://energyresearchinnovation.ca/">
+							<img class="max-h-20" src={erinl.src}>
+						</a>
+					</div>
+					<div class="flex row-auto space-x-5 pt-5 px-4 2xl:hidden">
+						<a href="https://nlhydro.com/">
+							<img class="max-h-16" src={nlhydro.src}>
+						</a>
+						<a href="https://verafin.com/">
+							<img class="max-h-16" src={verafin.src}>
+						</a>
+					</div>
+					<div class="flex row-auto space-x-5 pt-5 px-4 2xl:hidden">
+						<a href="https://worldenergygh2.com/">
+							<img class="max-h-14" src={gh2.src}>
+						</a>
+						<a href="https://energyresearchinnovation.ca/">
+							<img class="max-h-20" src={erinl.src}>
+						</a>
+					</div>
+				</div>
+				<div class="flex flex-col items-center pt-5">
+					<div class=" px-4 py-2 rounded-lg 2xl:text-4xl text-xl bg-amber-600 font-roboto">Bronze</div>
+					<div class="flex flex-row space-x-5 pt-5 px-4 2xl:block hidden">
+						<a href="https://pegnl.ca/">
+							<img class="max-h-12" src={pegnl.src}>
+						</a>
+						<a href="https://www.swagelok.com/">
+							<img class="max-h-12" src={swagelok.src}>
+						</a>
+						<a href="https://www.yellowpages.ca/bus/Alberta/Whitecourt/Tri-Logging-Ltd/5880643.html">
+							<img class="max-h-14" src={trilogging.src}>
+						</a>
+						<a href="https://ectl.ca/beattie-industrial/">
+							<img class="max-h-10" src={beattie.src}>
+						</a>
+						<a href="https://www.subsea7.com/en/index.html">
+							<img class="max-h-10" src={subsea.src}>
+						</a>
+						<a href="https://bluedropism.com/">
+							<img class="max-h-10" src={bluedrop.src}>
+						</a>
+					</div>
+					<div class="flex flex-row space-x-5 py-5 px-4 2xl:block hidden">
+						<a href="http://www.setpointae.ca/">
+							<img class="max-h-10" src={setpoint.src}>
+						</a>
+						<a href="https://www.fortisinc.com/">
+							<img class="max-h-10" src={fortis.src}>
+						</a>
+						<a href="https://www.heyorca.com/">
+							<img class="max-h-10" src={heyorca.src}>
+						</a>
+						<a href="https://corenl.com/">
+							<img class="max-h-10" src={core.src}>
+						</a>
+						<a href="https://genoadesign.com/">
+							<img class="max-h-10" src={genoa.src}>
+						</a>
+					</div>
+					<div class="flex flex-row space-x-5 pt-5 px-4 2xl:hidden">
+						<a href="https://pegnl.ca/">
+							<img class="max-h-12" src={pegnl.src}>
+						</a>
+						<a href="https://www.swagelok.com/">
+							<img class="max-h-12" src={swagelok.src}>
+						</a>
+						<a href="https://www.yellowpages.ca/bus/Alberta/Whitecourt/Tri-Logging-Ltd/5880643.html">
+							<img class="max-h-14" src={trilogging.src}>
+						</a>
+						<a href="https://ectl.ca/beattie-industrial/">
+							<img class="max-h-10" src={beattie.src}>
+						</a>
+					</div>
+					<div class="flex flex-row space-x-5 py-5 px-4 2xl:hidden">
+						<a href="https://www.subsea7.com/en/index.html">
+							<img class="max-h-10" src={subsea.src}>
+						</a>
+						<a href="https://bluedropism.com/">
+							<img class="max-h-10" src={bluedrop.src}>
+						</a>
+						<a href="http://www.setpointae.ca/">
+							<img class="max-h-10" src={setpoint.src}>
+						</a>
+						<a href="https://www.fortisinc.com/">
+							<img class="max-h-10" src={fortis.src}>
+						</a>
+					</div>
+					<div class="flex flex-row space-x-5 py-5 px-4 2xl:hidden">
+						<a href="https://www.heyorca.com/">
+							<img class="max-h-10" src={heyorca.src}>
+						</a>
+						<a href="https://corenl.com/">
+							<img class="max-h-10" src={core.src}>
+						</a>
+						<a href="https://genoadesign.com/">
+							<img class="max-h-10" src={genoa.src}>
+						</a>
+					</div>
+				</div>
+				<iframe class="h-screen 2xl:w-[50%] w-[85%] py-5 xl:block hidden" src="/Sponsorship Package-3.pdf" allow="autoplay"></iframe>
+				<div class="pt-4 px-5 pb-2 text-gray-700">Click below to download our sponsorship package!</div>
 				<a class="pb-5" href="/Sponsorship Package-3.pdf"><button type="button" class="text-white focus:ring-4 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-blue-800">Download</button></a>
 			</div>
 		</div>
 	</main>
-	<Footer />
 </Layout>

@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import logo from '../content/logo.png'
+import logo from '../content/logo.png';
 
 export const Navbar = () => {
 	const [active, setActive] = useState(false);
@@ -48,7 +48,7 @@ export const Navbar = () => {
 				</ul>
 				<div className={`relative ${active ? 'flex items-center' : 'hidden'} flex-col pb-2 w-full lg:hidden lg:flex-grow lg:w-auto`}>
 					<a href="/#" className={`lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-black font-Quicksand items-center justify-center hover:bg-gray-900 hover:text-white `}>
-						About Us
+						Home
 					</a>
 					<a href="/about" className={`lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-black font-Quicksand items-center justify-center hover:bg-gray-900 hover:text-white `}>
 						About Us
@@ -88,4 +88,6 @@ export const NavbarHamburger = (props) => {
 			/>
 		</>
 	);
-}
+};
+
+export default Navbar;
