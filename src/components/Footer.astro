@@ -1,7 +1,14 @@
 ---
 const year = new Date().getFullYear()
+
 ---
-<footer class="bottom-0 left-0 z-20 p-4 w-full border-t shadow md:flex md:items-center md:justify-between md:p-6 bg-stone-800 border-gray-600">
-    <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© {year} <a href="/" class="hover:underline">Paradigm Engineering</a>. All Rights Reserved.
+<style>
+    .nl-grad {
+        background: #013864;
+        background: linear-gradient(90deg, rgba(1, 56, 100, 1) 29%, rgba(186, 11, 47, 1) 82%, rgba(255, 164, 0, 1) 95%);
+    }
+</style>
+<footer class="bottom-0 left-0 z-20 p-4 w-full border-t shadow md:flex md:items-center md:justify-between md:p-3 nl-grad">
+    <span class="text-sm text-white sm:text-center dark:text-white">© {year} <a href="/" class="hover:underline">Paradigm Engineering</a>. All Rights Reserved.
     </span>
 </footer>

@@ -10,23 +10,31 @@ import kyle from '../content/headshots/kyle.jpg';
 import garry from '../content/headshots/garry.jpg';
 import ammar from '../content/headshots/ammar.jpg';
 
+import fuad from '../content/headshots/fuad.png';
+import jason from '../content/headshots/jason.png';
+import steven from '../content/headshots/steven.png';
+import anna from '../content/headshots/anna.png';
+import noah from '../content/headshots/noah.png';
+
 import hyperloop from '../content/timeline/hyperloop.jpeg';
 import frog from '../content/timeline/frog.jpg';
 import f1tenth from '../content/timeline/f1tenth.JPG';
+import karting from '../content/timeline/2025-karting.jpg';
+
 ---
 <Layout title="Paradigm Engineering">
-	<div class="relative w-full h-[40rem]">
-		<div class="w-full h-full bg-[url('/header.jpg')] bg-cover bg-center" />
-		<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col justify-center items-center">
-			<div class="flex items-center 2xl:flex-row flex-col 2xl:text-start text-center bg-black bg-opacity-50">
-				<img class="h-32 w-32 animate-spin-slow invert" src={logo.src}>
-				<div class="text-white font-roboto text-5xl pr-3">About Us</div>
+	<div class="relative w-full">
+		<div class="w-full h-2/3 bg-[url('/header-2.jpg')] bg-cover bg-center">
+			<div class="flex flex-col justify-center items-center pt-[20vh] pb-[10vh]">
+				<div class="h-1/4 flex w-[60vw] items-center flex-col 2xl:text-start text-center bg-black bg-opacity-50">
+					<div class="w-full self-stretch text-center text-white font-anta text-[2rem] md:text-[4rem] sm:text-[3rem]">ABOUT US</div>
+				</div>
 			</div>
 		</div>
 	</div>
 	<div class="flex justify-center bg-white">
-		<div class="flex flex-col items-center xl:py-10">
-			<div class="xl:px-[15%] text-gray-700">
+		<div class="flex flex-col items-center">
+			<div class="xl:px-[15%] text-gray-700 my-[2em]">
 				<img src={team.src}>
 			</div>
 		</div>
@@ -36,7 +44,8 @@ import f1tenth from '../content/timeline/f1tenth.JPG';
 			<div class="text-2xl font-roboto">Who are we?</div>
 			<hr class="w-16 h-0.5 my-2 border-0 bg-gray-900">
 			<div class="pt-4 xl:px-[25%] px-10 text-gray-700">
-				Paradigm Engineering is a diverse student group from the Memorial University of Newfoundland and Labrador (MUN). The team includes three engineering sub-teams for electrical, software, and mechanical work. A team of students from various backgrounds has also been made to complete administrative tasks, digital design work, and media outreach.
+				Paradigm Engineering is a diverse student group from the Memorial University of Newfoundland and Labrador (MUN). 
+				The team includes three engineering sub-teams for electrical, software, and mechanical work. 
 			</div>
 		</div>
 	</div>
@@ -45,11 +54,12 @@ import f1tenth from '../content/timeline/f1tenth.JPG';
 			<div class="text-2xl font-roboto">Team Leads</div>
 			<hr class="w-16 h-0.5 my-2 border-0 bg-gray-900">
 			<div class="lg:flex lg:flex-row grid grid-cols-2 2xl:space-x-10 pt-4 2xl:px-[15%] px-10">
-				<TeamProfile image={ayman} name="Ayman Islam" linkedin="https://www.linkedin.com/in/ayman-islam/" isLarge={true} title="Team Lead"/>
-				<TeamProfile image={sam} name="Sam Sheppard" linkedin="https://www.linkedin.com/in/samuel-sheppard-a22393226/" isLarge={true} title="Software Lead"/>
-				<TeamProfile image={kyle} name="Kyle Lynch" linkedin="https://www.linkedin.com/in/kyle-lynch-3a059825a/" isLarge={true} title="Electrical Lead"/>
-				<TeamProfile image={garry} name="Matthew Edison" linkedin="https://www.linkedin.com/in/matthew-edison-990222254/" isLarge={true} title="Mechanical Lead"/>
-				<TeamProfile image={ammar} name="Ammar Faruqui" linkedin="https://www.linkedin.com/in/ammarfaruqui/" isLarge={true} title="Business Lead"/>
+				<TeamProfile image={fuad} name="Fuad Ahmed" linkedin="www.linkedin.com/in/fuad-ahmed226" isLarge={true} title="Team Lead"/>
+				<TeamProfile image={jason} name="Jason Matthews" linkedin="www.linkedin.com/in/jason-matthews-3a417135b" isLarge={true} title="Software Co-Lead"/>
+				<TeamProfile image={steven} name="Steven Dyer" linkedin="https://www.linkedin.com/in/stevenwdyer/" isLarge={true} title="Software Co-Lead"/>
+				<TeamProfile image={anna} name="Anna Goldsworthy" linkedin="www.linkedin.com/in/anna-goldsworthy" isLarge={true} title="Electrical Lead"/>
+				<TeamProfile image={noah} name="Noah Swamidas" linkedin="https://www.linkedin.com/in/noah-swamidas-3a0b63297/" isLarge={true} title="Mechanical Lead"/>
+				
 			</div>
 		</div>
 	</div>
@@ -114,10 +124,35 @@ import f1tenth from '../content/timeline/f1tenth.JPG';
 				<!-- Item #4 -->
 				<div class="relative pl-8 sm:pl-32 py-6 group">
 					<div class="flex flex-col sm:flex-row items-start mb-1 group-last:before:hidden before:absolute before:left-2 sm:before:left-0 before:h-full before:px-px before:bg-slate-300 sm:before:ml-[6.5rem] before:self-start before:-translate-x-1/2 before:translate-y-3 after:absolute after:left-2 sm:after:left-0 after:w-2 after:h-2 after:bg-indigo-600 after:border-4 after:box-content after:rounded-full sm:after:ml-[6.5rem] after:-translate-x-1/2 after:translate-y-1.5">
-						<time class="sm:absolute left-0 translate-y-0.5 inline-flex items-center justify-center text-xs font-semibold uppercase w-20 h-6 mb-3 sm:mb-0 text-emerald-600 bg-emerald-100 rounded-full">2023-NOW</time>
-						<div class="text-xl font-bold text-slate-900">Autonomous Karting Series</div>
+						<time class="sm:absolute left-0 translate-y-0.5 inline-flex items-center justify-center text-xs font-semibold uppercase w-20 h-6 mb-3 sm:mb-0 text-emerald-600 bg-emerald-100 rounded-full">2023-2024</time>
+						<div class="text-xl font-bold text-slate-900">
+							
+							Autonomous Karting Series
+						</div>
 					</div>
 					<div class="text-slate-800 text-xl">Paradigm and FMUNTENTH have merged, becoming one team to create a larger scale autonomous racing vehicle. The team is set to compete in the Autonomous Karting Series competition at Purdue University in 2025</div>
+				</div>
+
+				<!-- Item #5 -->
+				 <div class="relative pl-8 sm:pl-32 py-6 group">
+					<div class="flex flex-col sm:flex-row items-start mb-1 group-last:before:hidden before:absolute before:left-2 sm:before:left-0 before:h-full before:px-px before:bg-slate-300 sm:before:ml-[6.5rem] before:self-start before:-translate-x-1/2 before:translate-y-3 after:absolute after:left-2 sm:after:left-0 after:w-2 after:h-2 after:bg-indigo-600 after:border-4 after:box-content after:rounded-full sm:after:ml-[6.5rem] after:-translate-x-1/2 after:translate-y-1.5">
+						<time class="sm:absolute left-0 translate-y-0.5 inline-flex items-center justify-center text-xs font-semibold uppercase w-20 h-6 mb-3 sm:mb-0 text-emerald-600 bg-emerald-100 rounded-full">2024-2025</time>
+						<div class="text-xl font-bold text-slate-900">
+							Autonomous Karting Competition
+							<img class="max-h-64 rounded-lg" src={karting.src}/>
+						</div>
+					</div>
+					<div class="text-slate-800 text-xl">description of outcome</div>
+				</div>
+				<!-- Item #6 -->
+				 <div class="relative pl-8 sm:pl-32 py-6 group">
+					<div class="flex flex-col sm:flex-row items-start mb-1 group-last:before:hidden before:absolute before:left-2 sm:before:left-0 before:h-full before:px-px before:bg-slate-300 sm:before:ml-[6.5rem] before:self-start before:-translate-x-1/2 before:translate-y-3 after:absolute after:left-2 sm:after:left-0 after:w-2 after:h-2 after:bg-indigo-600 after:border-4 after:box-content after:rounded-full sm:after:ml-[6.5rem] after:-translate-x-1/2 after:translate-y-1.5">
+						<time class="sm:absolute left-0 translate-y-0.5 inline-flex items-center justify-center text-xs font-semibold uppercase w-20 h-6 mb-3 sm:mb-0 text-emerald-600 bg-emerald-100 rounded-full">2025-Now</time>
+						<div class="text-xl font-bold text-slate-900">
+							Autonomous Karting Preparation
+						</div>
+					</div>
+					<div class="text-slate-800 text-xl">description of plans</div>
 				</div>
 			</div>
 		</div>

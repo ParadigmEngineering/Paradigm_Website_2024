@@ -4,11 +4,14 @@ module.exports = {
 	theme: {
 		extend: {
 			fontFamily: {
+				anta: ['Anta', 'sans-serif'],
 				techmono: ['ShareTechMono', 'monospace'],
 				tech: ['ShareTech', 'sans-serif'],
 				russo: ['RussoOne', 'sans-serif'],
 				bebas: ['BebasNeue', 'cursive'],
-				roboto: ['Roboto', 'roboto']
+				roboto: ['Roboto', 'roboto'],
+				mokoto: ['MokotoRegular', 'display'],
+				mokotoglitch: ['MokotoGlitch', 'sans-serif']
 			},
 			animation: {
 				'spin-slow': 'spin 10s linear infinite'

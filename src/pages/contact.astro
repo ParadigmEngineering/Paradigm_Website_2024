@@ -1,0 +1,37 @@
+---
+import Layout from '../layouts/Layout.astro';
+import logo from '../content/logo.png';
+import Button from '../components/Button.astro';
+
+---
+<style>
+    a {
+        color: #ffa400;
+        font-weight:600;
+    }
+    a:hover {
+        color: #ba0b2f;
+    }
+</style>
+<Layout title="Paradigm Engineering">
+	<div class="relative w-full">
+		<div class="w-full h-2/3 bg-[url('/header-2.jpg')] bg-cover bg-center">
+			<div class="flex flex-col justify-center items-center pt-[20vh] pb-[10vh]">
+				<div class="h-1/4 flex w-[60vw] items-center flex-col 2xl:text-start text-center bg-black bg-opacity-50">
+					<div class="w-full self-stretch text-center text-white font-anta text-[2rem] md:text-[4rem] sm:text-[3rem]">CONTACT</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="h-full flex justify-center bg-white">
+		<div class="w-2/3 flex flex-col items-center pt-[14vh] pb-[19vh]">
+			<div class="text-2xl font-roboto">Reach Out to Paradigm</div>
+			<hr class="w-16 h-0.5 my-2 border-0 bg-gray-900">
+			<div class="pt-4 text-gray-700 py-[2rem]">
+                Send an email to <a href="mailto:team@paradigmhyperloop.com">team@paradigmhyperloop.com</a> or click the button below.    
+            </div>
+            <Button buttonText="Email Us" buttonLink="mailto:team@paradigmhyperloop.com"/>
+		</div>
+	</div>		
+	</div>
+</Layout>
