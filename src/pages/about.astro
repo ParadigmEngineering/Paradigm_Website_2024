@@ -3,12 +3,7 @@ import Layout from '../layouts/Layout.astro';
 import logo from '../content/logo.png';
 import team from '../content/team_photo.jpeg';
 import TeamProfile from '../components/TeamProfile.astro';
-
-import sam from '../content/headshots/sam.jpg';
-import ayman from '../content/headshots/ayman.jpg';
-import kyle from '../content/headshots/kyle.jpg';
-import garry from '../content/headshots/garry.jpg';
-import ammar from '../content/headshots/ammar.jpg';
+import Button from '../components/Button.astro';
 
 import fuad from '../content/headshots/fuad.png';
 import jason from '../content/headshots/jason.png';
@@ -77,7 +72,15 @@ import karting from '../content/timeline/2025-karting.jpg';
 			<div class="text-2xl font-roboto">Upcoming Plans</div>
 			<hr class="w-16 h-0.5 my-2 border-0 bg-gray-900">
 			<div class="pt-4 xl:px-[25%] px-10 text-gray-700">
-				The team will be heading to Indiana in 2025 to compete in the Purdue University AKS (Autonomous Karting Series), hosted by the Autonomous Karting Series (AKS). The competition challenges teams to create a fully autonomous racing go-kart, capable of maneuvering an unseen course and racing around other vehicles, all without the aid of human control. The competition was started in 2009 at Purdue University, with the race being held annually at the University’s Grand Prix Track. The competition touches on the topics of machine learning, drive algorithms, electrical power distribution, PCB design, and mechanical design. A project like this provides an unparalleled experience to the team, shaping the future of the autonomous and robotics industries in this province.
+				The team will be returning to Indiana in 2026 to compete in the AKS (Autonomous Karting Series). 
+				The competition challenges teams to create a fully autonomous racing go-kart, 
+				capable of maneuvering an unseen course and racing around other vehicles, all without the aid of human control. 
+				The competition was started in 2009 at Purdue University, with the race being held annually at the University’s Grand Prix Track. 
+				The competition touches on the topics of machine learning, drive algorithms, electrical power distribution, PCB design, and EV design. 
+				A project like this provides an unparalleled experience to the team, 
+				shaping the future of the autonomous and robotics industries in this province.  
+				In June 2025, the team took on the competition for the first time and came 2nd overall!
+
 			</div>
 		</div>
 	</div>
@@ -124,37 +127,55 @@ import karting from '../content/timeline/2025-karting.jpg';
 				<!-- Item #4 -->
 				<div class="relative pl-8 sm:pl-32 py-6 group">
 					<div class="flex flex-col sm:flex-row items-start mb-1 group-last:before:hidden before:absolute before:left-2 sm:before:left-0 before:h-full before:px-px before:bg-slate-300 sm:before:ml-[6.5rem] before:self-start before:-translate-x-1/2 before:translate-y-3 after:absolute after:left-2 sm:after:left-0 after:w-2 after:h-2 after:bg-indigo-600 after:border-4 after:box-content after:rounded-full sm:after:ml-[6.5rem] after:-translate-x-1/2 after:translate-y-1.5">
-						<time class="sm:absolute left-0 translate-y-0.5 inline-flex items-center justify-center text-xs font-semibold uppercase w-20 h-6 mb-3 sm:mb-0 text-emerald-600 bg-emerald-100 rounded-full">2023-2024</time>
+						<time class="sm:absolute left-0 translate-y-0.5 inline-flex items-center justify-center text-xs font-semibold uppercase w-20 h-6 mb-3 sm:mb-0 text-emerald-600 bg-emerald-100 rounded-full">2023-2025</time>
 						<div class="text-xl font-bold text-slate-900">
-							
 							Autonomous Karting Series
+							<img class="max-h-64 rounded-lg" src={karting.src}/>
 						</div>
 					</div>
-					<div class="text-slate-800 text-xl">Paradigm and FMUNTENTH have merged, becoming one team to create a larger scale autonomous racing vehicle. The team is set to compete in the Autonomous Karting Series competition at Purdue University in 2025</div>
+					<div class="text-slate-800 text-xl">
+						Paradigm and FMUNTENTH have merged, becoming one team to create a larger-scale autonomous racing vehicle. 
+						The team is set to compete in the Autonomous Karting Series competition at Purdue University in 2025.
+					</div>
+					<div class="text-slate-800 text-xl">
+						. . .
+					</div>
+					<div class="text-slate-800 text-xl">
+						The team took on the Autonomous Karting Series in West Lafayette, Indiana. In Paradigm’s first year competing, we came 2nd overall!
+					</div>
 				</div>
 
 				<!-- Item #5 -->
 				 <div class="relative pl-8 sm:pl-32 py-6 group">
 					<div class="flex flex-col sm:flex-row items-start mb-1 group-last:before:hidden before:absolute before:left-2 sm:before:left-0 before:h-full before:px-px before:bg-slate-300 sm:before:ml-[6.5rem] before:self-start before:-translate-x-1/2 before:translate-y-3 after:absolute after:left-2 sm:after:left-0 after:w-2 after:h-2 after:bg-indigo-600 after:border-4 after:box-content after:rounded-full sm:after:ml-[6.5rem] after:-translate-x-1/2 after:translate-y-1.5">
-						<time class="sm:absolute left-0 translate-y-0.5 inline-flex items-center justify-center text-xs font-semibold uppercase w-20 h-6 mb-3 sm:mb-0 text-emerald-600 bg-emerald-100 rounded-full">2024-2025</time>
-						<div class="text-xl font-bold text-slate-900">
-							Autonomous Karting Competition
-							<img class="max-h-64 rounded-lg" src={karting.src}/>
-						</div>
-					</div>
-					<div class="text-slate-800 text-xl">description of outcome</div>
-				</div>
-				<!-- Item #6 -->
-				 <div class="relative pl-8 sm:pl-32 py-6 group">
-					<div class="flex flex-col sm:flex-row items-start mb-1 group-last:before:hidden before:absolute before:left-2 sm:before:left-0 before:h-full before:px-px before:bg-slate-300 sm:before:ml-[6.5rem] before:self-start before:-translate-x-1/2 before:translate-y-3 after:absolute after:left-2 sm:after:left-0 after:w-2 after:h-2 after:bg-indigo-600 after:border-4 after:box-content after:rounded-full sm:after:ml-[6.5rem] after:-translate-x-1/2 after:translate-y-1.5">
 						<time class="sm:absolute left-0 translate-y-0.5 inline-flex items-center justify-center text-xs font-semibold uppercase w-20 h-6 mb-3 sm:mb-0 text-emerald-600 bg-emerald-100 rounded-full">2025-Now</time>
 						<div class="text-xl font-bold text-slate-900">
-							Autonomous Karting Preparation
+							Returning to AKS
+							
 						</div>
 					</div>
-					<div class="text-slate-800 text-xl">description of plans</div>
+					<div class="text-slate-800 text-xl">
+						After pushing our 2025 setup to the limit, the team is returning to AKS with a more powerful, advanced kart. 
+						With many new faces and help from our advisors, we are designing a new drivetrain, as well as new software for the vehicle. 
+
+					</div>
 				</div>
 			</div>
 		</div>
 	</div>
+			<div id="cta-sponsorship" class="flex justify-center bg-white">
+			<div class="flex flex-col items-center py-10 w-2/3">
+				<div class="text-3xl font-roboto">Become a Sponsor</div>
+				<hr class="w-16 h-0.5 my-2 border-0 bg-gray-900">
+				<div class="w-3/4 pt-4 px-5 pb-2 text-gray-700">
+					Interested in supporting the Paradigm team in our upcoming season? 
+					Sponsors enable us to build the kart in-house, as well as travel to the competition to represent Newfoundland. 
+					Every sponsor logo is featured on our kart, as well as on our team shirts. 
+					Sponsors gain exposure to a whole new audience, and promotion through our website and social media. 
+					Sponsors can also receive team resume packages for hiring, 
+					giving them access to a group of ambitious individuals who are passionate about new technologies. 
+				</div>
+				<Button buttonLink="/sponsor" buttonText="Learn More"/>
+				</div>
+		</div>
 </Layout>
