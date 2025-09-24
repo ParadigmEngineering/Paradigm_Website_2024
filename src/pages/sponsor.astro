@@ -1,0 +1,42 @@
+---
+import Layout from '../layouts/Layout.astro';
+import logo from '../content/logo.png';
+import Button from '../components/Button.astro';
+
+---
+<Layout title="Paradigm Engineering">
+	<div class="relative w-full">
+		<div class="w-full h-2/3 bg-[url('/header-2.jpg')] bg-cover bg-center">
+			<div class="flex flex-col justify-center items-center pt-[20vh] pb-[10vh]">
+				<div class="h-1/4 flex w-[60vw] items-center flex-col 2xl:text-start text-center bg-black bg-opacity-50">
+					<div class="w-full self-stretch text-center text-white font-anta text-[2rem] md:text-[4rem] sm:text-[3rem]">SPONSOR PARADIGM</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="who" class="flex justify-center bg-white">
+		<div class="w-2/3 flex flex-col items-center py-[10vh]">
+			<div class="text-2xl font-roboto">Why Sponsor Paradigm?</div>
+			<hr class="w-16 h-0.5 my-2 border-0 bg-gray-900">
+			<div class="w-2/3 pt-4 text-gray-700">
+				Paradigm has a rich history of success, and is always looking to push the boundaries of autonomous transportation technology. 
+				By sponsoring Paradigm, your organization helps students develop skills, 
+				gain hands on experience and represent Newfoundland on an international stage. 
+				Sponsoring Paradigm supports the next generation of innovators and engineering talent on the island. 
+
+			</div>
+		</div>
+	</div>
+	<div id="what" class="w-100 flex justify-center bg-gray-200">
+		<div class="flex flex-col items-center py-10">
+			<div class="text-2xl font-roboto">Sponsorhip Package</div>
+			<div class="pt-4 text-gray-700">
+Read more about becoming a Paradigm sponsor in our sponsorship package here.			</div>
+			<iframe class="h-screen lg:w-[100%] md:w-[85%] w-[100%] py-5 md:block hidden" src="/Sponsorship-Package-3.pdf" allow="autoplay"></iframe>
+			<Button buttonText="Download" href="/Sponsorship-Package-3.pdf"/>
+		</div>
+	</div>
+	
+		
+	</div>
+</Layout>

@@ -1,9 +1,8 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import logo from '../content/logo.png';
-import Footer from '../components/Footer.astro';
 import SubsystemCard from '../components/SubsystemCard.astro';
-import { Computer, Zap, Wrench, Briefcase } from 'lucide-react';
+import Button from '../components/Button.astro';
 
 import vinfast from '../content/sponsors/vinfast.png';
 import pennecon from '../content/sponsors/pennecon.png';
@@ -27,46 +26,61 @@ import parker from '../content/sponsors/parker.png';
 import avaloncontrols from '../content/sponsors/avalon-controls.png';
 import colab from '../content/sponsors/colab.png';
 import ieee from '../content/sponsors/IEEE.png';
+
 ---
 
 <Layout title="Paradigm Engineering">
 	<main>
 		<div id="home" class="relative w-full h-[60rem]">
-			<div class="w-full h-full bg-[url('/header.jpg')] bg-cover bg-center" />
-			<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col justify-center items-center">
-				<div class="flex items-center 2xl:flex-row flex-col 2xl:text-start text-center bg-black bg-opacity-50">
-					<img class="h-60 w-60 animate-spin-slow invert" src={logo.src}>
-					<div class="text-white font-roboto 2xl:text-8xl text-6xl">Paradigm Engineering</div>
+			<div class="w-full h-full bg-[url('/header-1.jpg')] bg-cover bg-center" >
+			<div class="flex flex-col justify-center items-center pt-[20vh]">
+				<img class="h-60 w-60 animate-spin-slow invert" src={logo.src}>
+				<div class="h-1/4 flex w-[60vw] items-center flex-col 2xl:text-start text-center bg-black bg-opacity-50">
+					<div class="w-full self-stretch text-center text-white font-anta text-[3rem] lg:text-[9rem] md:text-[5rem] sm:text-[4rem]">PARADIGM</div>
+					<div class="w-full self-stretch text-center tracking-[0.65em] pl-[0.65em] text-white font-anta text-[1.1rem] lg:text-[3.5rem] md:text-[1.9rem] sm:text-[1.5rem] pb-4">ENGINEERING</div>
 				</div>
 			</div>
+			</div>
+			
 		</div>
 		<div id="about" class="flex justify-center bg-gray-200">
 			<div class="flex flex-col items-center py-10">
 				<div class="text-2xl font-roboto">Summary</div>
 				<hr class="w-16 h-0.5 my-2 border-0 bg-gray-900">
 				<div class="pt-4 xl:px-[25%] px-10 text-gray-700">
-					Paradigm Engineering is a diverse student group from Memorial University of Newfoundland and Labrador (MUN), focusing on developing and demonstrating autonomous racing vehicles. Comprising electrical, software, and mechanical sub-teams, as well as members for administrative tasks and media outreach, the group aims to excel in competitions and elevate Newfoundland and MUN in autonomous vehicle research. Their upcoming project involves participating in the Autonomous Karting Series in Indiana in 2025, a competition challenging teams to create fully autonomous racing go-karts. The project encompasses various engineering aspects, providing valuable experience and contributing to the future of autonomous and robotics industries in the province.
+					Paradigm Engineering is a diverse student group from Memorial University of Newfoundland and Labrador (MUN), 
+					focusing on developing and demonstrating autonomous racing vehicles. 
+					Comprising electrical, software, and mechanical subteams, as well as members for administrative tasks and media outreach, 
+					the group aims to excel in competitions and elevate Newfoundland and MUN in autonomous vehicle research.
+				</div>
+				<div class="pt-4 xl:px-[25%] px-10 text-gray-700">
+					In 2025, Paradigm Engineering  participated in the Autonomous Karting Series in Indiana, 
+					a competition challenging teams to create fully autonomous racing go-karts. 
+					It was the team’s first ever entry into the series, proudly placing 2nd overall. 
+					The Autonomous Karting Series project encompasses various engineering aspects, 
+					providing valuable experience and contributing to the future of autonomous and robotics industries in the province. 
+					The team will be returning to Indiana in 2026 to compete in the series again.
 				</div>
 			</div>
 		</div>
 		<div id="subsystems" class="flex justify-center bg-white">
-			<div class="flex flex-col items-center py-10">
-				<div class="text-2xl font-roboto">Subteams</div>
+			<div class="flex flex-col items-center py-20">
+				<div class="text-3xl font-roboto">Engineering Subteams</div>
 				<hr class="w-16 h-0.5 my-2 border-0 bg-gray-900">
-				<div class="grid lg:grid-cols-4 grid-cols-1 gap-20 px-20 xl:px-[15%]">
-					<SubsystemCard team="Software" desc="The Software team develops a track and obstacle detection algorithm, guiding the cart through seamless wireless communication with onboard components, ensuring a smooth journey."><Computer size={75}  /></SubsystemCard>
-					<SubsystemCard team="Electrical" desc="This subsystem brings the energy to the team - we are responsible for delivering power to all components on the kart, along with creating the electrical connections to allow the algorithm to communicate with external sensor devices."><Zap size={75}  /></SubsystemCard>
-					<SubsystemCard team="Mechanical" desc="The Mechanical Team puts the rubber on the road - our scope includes specifying, designing, modifying & manufacturing all the components necessary to turn a human-controlled go-kart into an autonomous vehicle."><Wrench size={75} /></SubsystemCard>
-					<SubsystemCard team="Business" desc="The business team is responsible for the financial management and marketing side of the project, ensuring our team is on track with our budget and has a strong marketing presence."><Briefcase size={75}  /></SubsystemCard>
+				<div class="grid lg:grid-cols-3 grid-cols-1 gap-20 px-20 xl:px-[15%] py-8">
+					<SubsystemCard team="Software" desc="The Software Subteam develops the code critical for guiding the cart through wireless communication with onboard components. Our track and obstacle detection algorithm ensures a smooth journey."><img src="icon-sw.png" width={75}/></SubsystemCard>
+					<SubsystemCard team="Electrical" desc="The Electrical Subteam brings the energy to the team - we are responsible for delivering power to all components on the kart, along with creating the electrical connections to allow the algorithm to communicate with external sensor devices."><img src="icon-elec.png" width={75}/></SubsystemCard>
+					<SubsystemCard team="Mechanical" desc="The Mechanical Subteam puts the rubber on the road. Our scope includes specifying, designing, modifying & manufacturing all the components necessary to turn a human-controlled go-kart into an autonomous vehicle."><img src="icon-mech.png" width={75}/></SubsystemCard>
+					
 				</div>
 			</div>
 		</div>
 		<div id="sponsors" class="flex justify-center bg-gray-200">
 			<div class="flex flex-col items-center py-10">
-				<div class="text-2xl font-roboto">Sponsors</div>
+				<div class="text-3xl font-roboto">Our Sponsors</div>
 				<hr class="w-16 h-0.5 my-2 border-0 bg-gray-900">
-				<div class="pt-4 2xl:px-[30%] px-10 text-gray-700">
-					Sponsors are a cruicial part of our team! They allow us to research, design and fabricate our projects, as well as enable us travel to our competitions! Check out our sponsorship package below for more info!
+				<div class="pt-4 px-10 text-gray-700">
+					We're grateful to all our sponsors who made it possible for us to compete in the 2025 competition.
 				</div>
 				<div class="flex flex-col items-center pt-5">
 					<div class="px-5 py-2 rounded-lg 2xl:text-6xl text-4xl bg-yellow-500 font-roboto">Gold</div>
@@ -221,10 +235,24 @@ import ieee from '../content/sponsors/IEEE.png';
 						</a>
 					</div>
 				</div>
-				<iframe class="h-screen 2xl:w-[50%] w-[85%] py-5 xl:block hidden" src="/Sponsorship Package-3.pdf" allow="autoplay"></iframe>
-				<div class="pt-4 px-5 pb-2 text-gray-700">Click below to download our sponsorship package!</div>
-				<a class="pb-5" href="/Sponsorship Package-3.pdf"><button type="button" class="text-white focus:ring-4 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-blue-800">Download</button></a>
+				
+				
 			</div>
+		</div>
+		<div id="cta-sponsorship" class="flex justify-center bg-white">
+			<div class="flex flex-col items-center py-10 w-2/3">
+				<div class="text-3xl font-roboto">Become a Sponsor</div>
+				<hr class="w-16 h-0.5 my-2 border-0 bg-gray-900">
+				<div class="w-3/4 pt-4 px-5 pb-2 text-gray-700">
+					Interested in supporting the Paradigm team in our upcoming season? 
+					Sponsors enable us to build the kart in-house, as well as travel to the competition to represent Newfoundland. 
+					Every sponsor logo is featured on our kart, as well as on our team shirts. 
+					Sponsors gain exposure to a whole new audience, and promotion through our website and social media. 
+					Sponsors can also receive team resume packages for hiring, 
+					giving them access to a group of ambitious individuals who are passionate about new technologies. 
+				</div>
+				<Button buttonLink="/sponsor" buttonText="Learn More"/>
+				</div>
 		</div>
 	</main>
 </Layout>
