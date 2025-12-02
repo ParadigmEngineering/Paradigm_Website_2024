@@ -4,29 +4,20 @@ import logo from '../content/logo.png';
 import SubsystemCard from '../components/SubsystemCard.astro';
 import Button from '../components/Button.astro';
 
-import vinfast from '../content/sponsors/vinfast.png';
-import pennecon from '../content/sponsors/pennecon.png';
-import nlhydro from '../content/sponsors/nlhydro.png';
-import verafin from '../content/sponsors/verafin.png';
-import gh2 from '../content/sponsors/gh2.png';
-import erinl from '../content/sponsors/erinl.png';
-import pegnl from '../content/sponsors/pegnl.png';
-import swagelok from '../content/sponsors/swagelok.png';
-import trilogging from '../content/sponsors/tri-logging.png';
-import beattie from '../content/sponsors/beattie-logo.png';
-import subsea from '../content/sponsors/subsea.png';
-import bluedrop from '../content/sponsors/bluedrop.png';
-import setpoint from '../content/sponsors/setpoint.png';
-import fortis from '../content/sponsors/fortis.png';
-import heyorca from '../content/sponsors/heyorca.png';
-import core from '../content/sponsors/core-eng.png';
-import genoa from '../content/sponsors/genoa.png';
-import training_works from '../content/sponsors/training-works.png';
-import parker from '../content/sponsors/parker.png';
-import avaloncontrols from '../content/sponsors/avalon-controls.png';
-import colab from '../content/sponsors/colab.png';
-import ieee from '../content/sponsors/IEEE.png';
+// gold sponsors
+import gip from '../content/sponsors/GIP.png'
 
+// silver sponsors
+import erinl from '../content/sponsors/ERINL-logo.png'
+import nlhydro from '../content/sponsors/NL-hydro-RGB.png'
+
+// bronze sponsors
+import beattie from '../content/sponsors/Beattie.png'
+import fortis from '../content/sponsors/Fortis.png'
+import parker from '../content/sponsors/Parker.jpg'
+import setpoint from '../content/sponsors/Setpoint.png'
+import subsea from '../content/sponsors/Subsea7.png'
+import sdh from '../content/sponsors/SDH.png'
 ---
 
 <Layout title="Paradigm Engineering">
@@ -75,168 +66,66 @@ import ieee from '../content/sponsors/IEEE.png';
 				</div>
 			</div>
 		</div>
-		<div id="sponsors" class="flex justify-center bg-gray-200">
+		<div id="sponsors" class="flex justify-center bg-gray-200 flex-col">
 			<div class="flex flex-col items-center py-10">
 				<div class="text-3xl font-roboto">Our Sponsors</div>
-				<hr class="w-16 h-0.5 my-2 border-0 bg-gray-900">
+				<hr class="w-32 h-0.5 my-2 border-0 bg-gray-900">
 				<div class="pt-4 px-10 text-gray-700">
 					We're grateful to all our sponsors who made it possible for us to compete in the 2025 competition.
 				</div>
+				<!-- GOLD -->
 				<div class="flex flex-col items-center pt-5">
 					<div class="px-5 py-2 rounded-lg 2xl:text-6xl text-4xl bg-yellow-500 font-roboto">Gold</div>
 					<div class="flex flex-row items-center space-x-10 pt-5 px-4">
-						<a href="https://vinfastauto.ca/">
-							<img class="max-h-24" src={vinfast.src}>	
-						</a>
-						<a href="https://pennecon.com/">
-							<img class="max-h-24" src={pennecon.src}>	
+						<a href="https://gipi.com/">
+							<img class="max-h-24" src={gip.src}>	
 						</a>
 					</div>
 				</div>
+				<!-- SILVER -->
 				<div class="flex flex-col items-center pt-5">
 					<div class="px-4 py-2 rounded-lg 2xl:text-5xl text-3xl bg-gray-400 font-roboto">Silver</div>
 					<div class="hidden xl:flex row-auto space-x-5 pt-5 px-4 items-center">
 						<a href="https://nlhydro.com/">
 							<img class="max-h-16" src={nlhydro.src}>
 						</a>
-						<a href="https://verafin.com/">
-							<img class="max-h-16" src={verafin.src}>
-						</a>
-						<a href="https://worldenergygh2.com/">
-							<img class="max-h-14" src={gh2.src}>
-						</a>
 						<a href="https://energyresearchinnovation.ca/">
-							<img class="max-h-20" src={erinl.src}>
+							<img class="max-h-16" src={erinl.src}>
 						</a>
-						<a href="https://www.avaloncontrols.ca/">
-							<img class="max-h-10" src={avaloncontrols.src}>
-						</a>
-					</div>
-					<div class="flex row-auto space-x-5 pt-5 px-4 items-center xl:hidden">
-						<a href="https://nlhydro.com/">
-							<img class="max-h-16" src={nlhydro.src}>
-						</a>
-						<a href="https://verafin.com/">
-							<img class="max-h-16" src={verafin.src}>
-						</a>
-					</div>
-					<div class="flex row-auto space-x-5 pt-5 px-4 items-center xl:hidden">
-						<a href="https://worldenergygh2.com/">
-							<img class="max-h-14" src={gh2.src}>
-						</a>
-						<a href="https://energyresearchinnovation.ca/">
-							<img class="max-h-20" src={erinl.src}>
-						</a>
-						<a href="https://www.avaloncontrols.ca/">
-							<img class="max-h-10" src={avaloncontrols.src}>
-						</a>
-					</div>
 				</div>
+				<!-- BRONZE -->
 				<div class="flex flex-col items-center pt-5">
 					<div class=" px-4 py-2 rounded-lg 2xl:text-4xl text-xl bg-amber-600 font-roboto">Bronze</div>
 					<div class="hidden 2xl:flex flex-row space-x-5 pt-5 px-4">
-						<a href="https://pegnl.ca/">
-							<img class="max-h-12" src={pegnl.src}>
-						</a>
-						<a href="https://www.swagelok.com/">
-							<img class="max-h-12" src={swagelok.src}>
-						</a>
-						<a href="https://www.yellowpages.ca/bus/Alberta/Whitecourt/Tri-Logging-Ltd/5880643.html">
-							<img class="max-h-14" src={trilogging.src}>
+						<a href="https://www.fortisinc.com/">
+							<img class="max-h-10" src={fortis.src}>
 						</a>
 						<a href="https://ectl.ca/beattie-industrial/">
 							<img class="max-h-10" src={beattie.src}>
 						</a>
-						<a href="https://www.subsea7.com/en/index.html">
-							<img class="max-h-10" src={subsea.src}>
-						</a>
-						<a href="https://bluedropism.com/">
-							<img class="max-h-10" src={bluedrop.src}>
-						</a>
-						<a href="https://colabsoftware.com/">
-							<img class="max-h-10" src={colab.src}>
-						</a>
-						<a href="https://www.ieeecanadianfoundation.org/">
-							<img class="max-h-12" src={ieee.src}>
+						
+						<a href="https://www.parker.com/">
+							<img class="max-h-12" src={parker.src}>
 						</a>
 					</div>
-					<div class="hidden 2xl:flex flex-row space-x-5 py-5 px-4">
+					<div class="hidden 2xl:flex flex-row space-x-5 pt-5 px-4">
+						
 						<a href="http://www.setpointae.ca/">
-							<img class="max-h-10" src={setpoint.src}>
+							<img class="max-h-12" src={setpoint.src}>
 						</a>
-						<a href="https://www.fortisinc.com/">
-							<img class="max-h-10" src={fortis.src}>
-						</a>
-						<a href="https://www.heyorca.com/">
-							<img class="max-h-10" src={heyorca.src}>
-						</a>
-						<a href="https://corenl.com/">
-							<img class="max-h-10" src={core.src}>
-						</a>
-						<a href="https://genoadesign.com/">
-							<img class="max-h-10" src={genoa.src}>
-						</a>
-						<a href="https://www.training-works.ca/">
-							<img class="max-h-10" src={training_works.src}>
-						</a>
-						<a href="https://www.parker.com/us/en/home.html">
-							<img class="max-h-10" src={parker.src}>
-						</a>
-					</div>
-					<div class="flex flex-row space-x-5 pt-5 px-4 2xl:hidden">
-						<a href="https://pegnl.ca/">
-							<img class="max-h-12" src={pegnl.src}>
-						</a>
-						<a href="https://www.swagelok.com/">
-							<img class="max-h-12" src={swagelok.src}>
-						</a>
-						<a href="https://www.yellowpages.ca/bus/Alberta/Whitecourt/Tri-Logging-Ltd/5880643.html">
-							<img class="max-h-14" src={trilogging.src}>
-						</a>
-						<a href="https://ectl.ca/beattie-industrial/">
-							<img class="max-h-10" src={beattie.src}>
-						</a>
-						<a href="https://www.ieeecanadianfoundation.org/">
-							<img class="max-h-12" src={ieee.src}>
-						</a>
-					</div>
-					<div class="flex flex-row space-x-5 py-5 px-4 2xl:hidden">
 						<a href="https://www.subsea7.com/en/index.html">
-							<img class="max-h-10" src={subsea.src}>
-						</a>
-						<a href="https://bluedropism.com/">
-							<img class="max-h-10" src={bluedrop.src}>
-						</a>
-						<a href="http://www.setpointae.ca/">
-							<img class="max-h-10" src={setpoint.src}>
-						</a>
-						<a href="https://www.fortisinc.com/">
-							<img class="max-h-10" src={fortis.src}>
-						</a>
-						<a href="https://colabsoftware.com/">
-							<img class="max-h-10" src={colab.src}>
-						</a>
-					</div>
-					<div class="flex flex-row space-x-5 py-5 px-4 2xl:hidden">
-						<a href="https://www.heyorca.com/">
-							<img class="max-h-10" src={heyorca.src}>
-						</a>
-						<a href="https://corenl.com/">
-							<img class="max-h-10" src={core.src}>
-						</a>
-						<a href="https://genoadesign.com/">
-							<img class="max-h-10" src={genoa.src}>
-						</a>
-						<a href="https://www.training-works.ca/">
-							<img class="max-h-10" src={training_works.src}>
-						</a>
-						<a href="https://www.parker.com/us/en/home.html">
-							<img class="max-h-10" src={parker.src}>
+							<img class="max-h-12" src={subsea.src}>
 						</a>
 					</div>
 				</div>
-				
-				
+				<div class="flex flex-col items-center pt-10">
+					<div class=" px-4 py-3 rounded-lg 2xl:text-4xl text-xl font-roboto">Very Special Thanks</div>
+						<div class="hidden 2xl:flex flex-row space-x-5 pt-5 px-4"></div>
+							<a href="https://www.mun.ca/sdh/">
+								<img class="max-h-32" src={sdh.src}>
+							</a>
+						</div>
+				</div>
 			</div>
 		</div>
 		<div id="cta-sponsorship" class="flex justify-center bg-white">
